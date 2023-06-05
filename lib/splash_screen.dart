@@ -1,0 +1,52 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:techblog/gen/assets.gen.dart';
+import 'package:techblog/main_screen.dart';
+import 'package:techblog/my_colors.dart';
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+
+    Future.delayed(const Duration(seconds: 3)).then(
+      (value) {
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (context) =>
+                MainScreen())); // pushReplacement() Replaces the forwarding page which is MainScreen in this code with splashScreen and removes it from the stack[0]
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: SolidColors.SCAFFOLDBG,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image(
+              image: Image.asset(Assets.images.splash.path).image,
+              height: 100,
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            const SpinKitFadingCube(
+              color: SolidColors.PRIMARY_COLOR,
+              size: 32.0,
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

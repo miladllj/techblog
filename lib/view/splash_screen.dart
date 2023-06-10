@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:techblog/gen/assets.gen.dart';
-import 'package:techblog/main_screen.dart';
+import 'package:techblog/view/main_screen.dart';
 import 'package:techblog/my_colors.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
       (value) {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
             builder: (context) =>
-                MainScreen())); // pushReplacement() Replaces the forwarding page which is MainScreen in this code with splashScreen and removes it from the stack[0]
+                const MainScreen())); // pushReplacement() Replaces the forwarding page which is MainScreen in this code with splashScreen and removes it from the stack[0]
       },
     );
   }
@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: SolidColors.SCAFFOLDBG,
+        backgroundColor: SolidColors.scaffoldBg,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -41,7 +41,7 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 15,
             ),
             const SpinKitFadingCube(
-              color: SolidColors.PRIMARY_COLOR,
+              color: SolidColors.primaryColor,
               size: 32.0,
             )
           ],

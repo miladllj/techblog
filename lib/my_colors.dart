@@ -1,37 +1,46 @@
 import 'package:flutter/material.dart';
 
 class SolidColors {
-  static const Color POSTER_TITLE = Color.fromARGB(255, 255, 255, 255);
-  static const Color POSTER_SUBTITLE = Color.fromARGB(200, 255, 255, 255);
-  static const Color PRIMARY_COLOR = Color.fromARGB(255, 68, 4, 87);
-  static const Color COLOR_TITLE = Color.fromARGB(255, 40, 107, 184);
-  static const Color TEXT_TITLE = Color.fromARGB(255, 0, 0, 0);
-  static const Color SCAFFOLDBG = Color.fromARGB(255, 255, 255, 255);
-  static const Color STATUSBAR_COLOR = Color.fromARGB(255, 255, 255, 255);
-  static const Color SYSTEM_NAVIGATIONBAR_COLOR = Color.fromARGB(255, 255, 255, 255);
-  static const Color LIGHT_TEXT = Color.fromARGB(255, 255, 255, 255);
-  static const Color SELECTED_PODCAST = Color.fromARGB(255, 255, 139, 26);
-  static const Color SUBMIT_ARTICLE = Color.fromARGB(255, 209, 209, 209);
-  static const Color SUBMIT_PODCAST = Color.fromARGB(255, 246, 246, 246);
-  static const Color SUBTEXT = Color.fromARGB(255, 197, 197, 197);
-  static const Color SEE_MORE = Color.fromARGB(255, 40, 407, 184);
+  static const Color posterTitle = Color.fromARGB(255, 255, 255, 255);
+  static const Color posterSubtitle = Color.fromARGB(200, 255, 255, 255);
+  static const Color primaryColor = Color.fromARGB(255, 68, 4, 87);
+  static const Color colorTitle = Color.fromARGB(255, 40, 107, 184);
+  static const Color textTitle = Color.fromARGB(255, 0, 0, 0);
+  static const Color scaffoldBg = Color.fromARGB(255, 255, 255, 255);
+  static const Color statusBarColor = Color.fromARGB(255, 255, 255, 255);
+  static const Color systemNavigationBarColor = Color.fromARGB(255, 255, 255, 255);
+  static const Color lightText = Color.fromARGB(255, 255, 255, 255);
+  static const Color selectedPodcast = Color.fromARGB(255, 255, 139, 26);
+  static const Color submitArticle = Color.fromARGB(255, 209, 209, 209);
+  static const Color submitPodcast = Color.fromARGB(255, 246, 246, 246);
+  static const Color subText = Color.fromARGB(255, 197, 197, 197);
+  static const Color seeMore = Color.fromARGB(255, 40, 407, 184);
+  static const Color divider = Color.fromARGB(255, 112, 112, 112);
+  static const Color welcomeText = Color.fromARGB(255, 107, 107, 107);
+  static const Color hintText = Color.fromARGB(255, 219, 219, 219);
+  static const Color selectedTagsBG = Color.fromARGB(255, 242, 242, 242);
+  static const Color selectedTagsText = Color.fromARGB(255, 37, 37, 37);
 }
 
 class GradientColors {
-  static const List<Color> BUTTOM_NAVIGATION = [
+  static const List<Color> buttomNavigation = [
     Color.fromARGB(255, 25, 0, 94),
     Color.fromARGB(255, 68, 4, 87)
   ];
-  static const List<Color> TAGS = [
+  static const List<Color> buttomNavigationBackground = [
+    Color.fromARGB(0, 255, 255, 255),
+    Color.fromARGB(255, 255, 255, 255)
+  ];
+  static const List<Color> tags = [
     Color.fromARGB(255, 0, 0, 0),
     Color.fromARGB(255, 63, 63, 63)
   ];
-  static const List<Color> HOME_POSTER_COVER_GRADIENT = [
+  static const List<Color> homePosterCoverGradient = [
     Color.fromARGB(0, 0, 0, 0),
     Color.fromARGB(195, 72, 20, 88),
     Color.fromARGB(255, 28, 20, 81),
   ];
-  static const List<Color> BLOG_POST = [
+  static const List<Color> blogPost = [
     Color.fromARGB(255, 0, 0, 0),
     Color.fromARGB(0, 0, 0, 0)
   ];

@@ -3,8 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:techblog/view/my_categories.dart';
 import 'package:validators/validators.dart';
 import 'package:techblog/gen/assets.gen.dart';
-import 'package:techblog/my_colors.dart';
-import 'package:techblog/my_strings.dart';
+import 'package:techblog/component/my_colors.dart';
+import 'package:techblog/component/my_strings.dart';
 
 class RegisterIntro extends StatelessWidget {
   const RegisterIntro({Key? key}) : super(key: key);

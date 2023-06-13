@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
       (value) {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
             builder: (context) =>
-                const MainScreen())); // pushReplacement() Replaces the forwarding page which is MainScreen in this code with splashScreen and removes it from the stack[0]
+                MainScreen())); // pushReplacement() Replaces the forwarding page which is MainScreen in this code with splashScreen and removes it from the stack[0]
       },
     );
   }

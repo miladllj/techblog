@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:techblog/component/api_constant.dart';
+import 'package:techblog/services/dio_services.dart';
 
 import '../gen/assets.gen.dart';
 import '../models/fake_data.dart';
@@ -20,6 +22,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    DioServices().getMethod(ApiConstant.getHomeItems);
     return SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
       child: Padding(

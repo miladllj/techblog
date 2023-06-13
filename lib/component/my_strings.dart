@@ -11,10 +11,17 @@ class MyStrings {
   static const String enterEmail = 'لطفا ایمیلت را وارد کن';
   static const String activateCode = 'کد فعالسازی را وارد کن';
   static const String chooseCategory = 'دسته بندی هایی که دوست داری رو انتخاب کن';
+  static const String techBlogGithubUrl = 'https://github.com/miladllj/techblog';
   static const String welcome = ''' به تک‌بلاگ خوش اومدی
 
 برای ارسال مطلب و پادکست باید حتما 
 ثبت نام کنی  ''';
+  static const String shareText = '''
+من از تک بلاگ استفاده میکنم ، خیلی باحاله تو هم داشته باش\n
+
+www.example.com
+
+''';
 static const String successfullRegisteration = ''' تبریک میگم ، ایمیل با موفقیت تایید شد
       لطفا اطلاعات ثبت نام رو کامل کن ''';
 }

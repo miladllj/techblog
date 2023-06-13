@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../gen/assets.gen.dart';
 import '../models/fake_data.dart';
@@ -67,5 +70,19 @@ class MainTags extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+myLaunchUrl(String url) async {
+  var uri = Uri.parse(url);
+  try {
+    List<bool> results =
+        await Future.wait([launchUrl(uri)]).timeout(const Duration(seconds: 30));
+    bool launched = results[0];
+    if (!launched) {
+      log('Could not launch $url');
+    }
+  } catch (e) {
+    log('Error launching $url: ${e.toString()}');
   }
 }

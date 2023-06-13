@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:techblog/component/my_component.dart';
+import 'package:techblog/component/my_strings.dart';
 import 'package:techblog/gen/assets.gen.dart';
 import 'package:techblog/component/my_colors.dart';
 import 'package:techblog/view/profile_screen.dart';
+import 'package:get/get.dart';
+import 'package:share_plus/share_plus.dart';
 
-import '../component/my_component.dart';
 import 'home_screen.dart';
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
+final GlobalKey<ScaffoldState> _key = GlobalKey();
 
-  @override
-  State<MainScreen> createState() => _MainScreenState();
-}
-  final GlobalKey<ScaffoldState> _key = GlobalKey();
+class MainScreen extends StatelessWidget {
+  RxInt selectedPageIndex = 0.obs;
 
-class _MainScreenState extends State<MainScreen> {
-  var selectedPageIndex = 0;
-
+  MainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +44,10 @@ class _MainScreenState extends State<MainScreen> {
                     'پروفایل کاربری',
                     style: textTheme.bodySmall,
                   ),
-                  onTap: () {},
+                  onTap: () {
+                    selectedPageIndex.value = 1;
+                  _key.currentState!.closeDrawer();
+                  },
                 ),
                 const Divider(
                   color: SolidColors.divider,
@@ -66,7 +67,9 @@ class _MainScreenState extends State<MainScreen> {
                     'اشتراک گذاری تک بلاگ',
                     style: textTheme.bodySmall,
                   ),
-                  onTap: () {},
+                  onTap: () async {
+                    await Share.share(MyStrings.shareText);
+                  },
                 ),
                 const Divider(
                   color: SolidColors.divider,
@@ -76,7 +79,9 @@ class _MainScreenState extends State<MainScreen> {
                     'تک بلاگ در گیت هاب',
                     style: textTheme.bodySmall,
                   ),
-                  onTap: () {},
+                  onTap: () {
+                    myLaunchUrl(MyStrings.techBlogGithubUrl);
+                  },
                 ),
                 const Divider(
                   color: SolidColors.divider,
@@ -116,26 +121,27 @@ class _MainScreenState extends State<MainScreen> {
         body: Stack(
           children: [
             Positioned.fill(
-                child: IndexedStack(
-              index: selectedPageIndex,
-              children: [
-                HomeScreen(
-                    size: size,
-                    textTheme: textTheme,
-                    faseleAzRast: faseleAzRast), // 0
-                ProfileScreen(
-                    size: size,
-                    textTheme: textTheme,
-                    faseleAzRast: faseleAzRast) // 1
-              ],
-            )),
+              child: Obx(
+                () => IndexedStack(
+                  index: selectedPageIndex.value,
+                  children: [
+                    HomeScreen(
+                        size: size,
+                        textTheme: textTheme,
+                        faseleAzRast: faseleAzRast), // 0
+                    ProfileScreen(
+                        size: size,
+                        textTheme: textTheme,
+                        faseleAzRast: faseleAzRast) // 1
+                  ],
+                ),
+              ),
+            ),
             BottomNavigation(
                 size: size,
                 faseleAzRast: faseleAzRast,
                 changeScreen: (int value) {
-                  setState(() {
-                    selectedPageIndex = value;
-                  });
+                  selectedPageIndex.value = value;
                 }),
           ],
         ),

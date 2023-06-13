@@ -129,7 +129,7 @@ class MyApp extends StatelessWidget {
               color: SolidColors.primaryColor),
         ),
       ),
-      home: MyCategories(),
+      home: MainScreen(),
     ));
   }
 }

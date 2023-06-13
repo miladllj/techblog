@@ -1,15 +1,15 @@
-class ArticleModel {
+class PosterModel {
   String? id;
   String? title;
   String? image;
 
-  ArticleModel({
+  PosterModel({
     required this.id,
     required this.title,
     required this.image,
   });
 
-  ArticleModel.fromJson(Map<String, dynamic> element) {
+  PosterModel.fromJson(Map<String, dynamic> element) {
     id = element["id"];
     title = element["title"];
     image = element["image"];

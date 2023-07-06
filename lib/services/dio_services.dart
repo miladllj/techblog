@@ -6,16 +6,16 @@ class DioServices {
   Future<dynamic> getMethod(String url) async {
     Dio dio = Dio();
     dio.options.headers['content-type'] = 'application/json';
-    return await dio
-        .get(
-      url,
-      options: Options(responseType: ResponseType.json, method: 'Get'),
-    )
-        .then(
-      (response) {
-        log('response is : $response');
-        return response;
-      },
-    );
+    try {
+      Response response = await dio.get(
+        url,
+        options: Options(responseType: ResponseType.json, method: 'Get'),
+      );
+      log('response is : $response');
+      return response;
+    } catch (e) {
+      log('Error during GET request: $e');
+      rethrow;
+    }
   }
 }

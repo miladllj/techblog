@@ -86,41 +86,41 @@ List<BlogModel> blogList = [
       views: '256'),
 ];
 
-List<PodcastModel> podcastList = [
-  PodcastModel(
-      id: 1,
-      imageUrl:
-          'https://media.wired.com/photos/620eb0f39266d5d11c07b3c5/master/w_2560%2Cc_limit/Gear-Podcast-Gear-1327244548.jpg',
-      title: 'رمزون',
-      nariator: 'سیاوش امیریان'),
-      PodcastModel(
-      id: 2,
-      imageUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHSS5AT0i3gCz6ZBSuiPQH3vQ2TTrEE8dyZxRUc3Gs27NphYWbHEQr_-aqaQvP0amfjEU&usqp=CAU',
-      title: 'کدیاد',
-      nariator: 'رضا عزیزی'),
-      PodcastModel(
-      id: 3,
-      imageUrl:
-          'https://www.clio.com/wp-content/uploads/2020/05/Clio_2020-Blog_Image-Top_10_Law_Firm_Podcasts.png',
-      title: 'گیک',
-      nariator: 'جادی میرمیرانی'),
-      PodcastModel(
-      id: 4,
-      imageUrl:
-          'https://media.wired.com/photos/5926c36b7034dc5f91bec876/master/w_2560%2Cc_limit/PodcastTA.jpg',
-      title: 'متا',
-      nariator: 'بهزاد کریم خانی'),
-      PodcastModel(
-      id: 5,
-      imageUrl:
-          'https://www.clio.com/wp-content/uploads/2020/05/Clio_2020-Blog_Image-Top_10_Law_Firm_Podcasts.png',
-      title: 'گیک',
-      nariator: 'جادی میرمیرانی'),
-      PodcastModel(
-      id: 6,
-      imageUrl:
-          'https://media.wired.com/photos/5926c36b7034dc5f91bec876/master/w_2560%2Cc_limit/PodcastTA.jpg',
-      title: 'متا',
-      nariator: 'بهزاد کریم خانی'),
-];
+// List<PodcastModel> podcastList = [
+//   PodcastModel(
+//       id: 1,
+//       imageUrl:
+//           'https://media.wired.com/photos/620eb0f39266d5d11c07b3c5/master/w_2560%2Cc_limit/Gear-Podcast-Gear-1327244548.jpg',
+//       title: 'رمزون',
+//       nariator: 'سیاوش امیریان'),
+//       PodcastModel(
+//       id: 2,
+//       imageUrl:
+//           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHSS5AT0i3gCz6ZBSuiPQH3vQ2TTrEE8dyZxRUc3Gs27NphYWbHEQr_-aqaQvP0amfjEU&usqp=CAU',
+//       title: 'کدیاد',
+//       nariator: 'رضا عزیزی'),
+//       PodcastModel(
+//       id: 3,
+//       imageUrl:
+//           'https://www.clio.com/wp-content/uploads/2020/05/Clio_2020-Blog_Image-Top_10_Law_Firm_Podcasts.png',
+//       title: 'گیک',
+//       nariator: 'جادی میرمیرانی'),
+//       PodcastModel(
+//       id: 4,
+//       imageUrl:
+//           'https://media.wired.com/photos/5926c36b7034dc5f91bec876/master/w_2560%2Cc_limit/PodcastTA.jpg',
+//       title: 'متا',
+//       nariator: 'بهزاد کریم خانی'),
+//       PodcastModel(
+//       id: 5,
+//       imageUrl:
+//           'https://www.clio.com/wp-content/uploads/2020/05/Clio_2020-Blog_Image-Top_10_Law_Firm_Podcasts.png',
+//       title: 'گیک',
+//       nariator: 'جادی میرمیرانی'),
+//       PodcastModel(
+//       id: 6,
+//       imageUrl:
+//           'https://media.wired.com/photos/5926c36b7034dc5f91bec876/master/w_2560%2Cc_limit/PodcastTA.jpg',
+//       title: 'متا',
+//       nariator: 'بهزاد کریم خانی'),
+// ];

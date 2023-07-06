@@ -8,7 +8,8 @@ class SolidColors {
   static const Color textTitle = Color.fromARGB(255, 0, 0, 0);
   static const Color scaffoldBg = Color.fromARGB(255, 255, 255, 255);
   static const Color statusBarColor = Color.fromARGB(255, 255, 255, 255);
-  static const Color systemNavigationBarColor = Color.fromARGB(255, 255, 255, 255);
+  static const Color systemNavigationBarColor =
+      Color.fromARGB(255, 255, 255, 255);
   static const Color lightText = Color.fromARGB(255, 255, 255, 255);
   static const Color selectedPodcast = Color.fromARGB(255, 255, 139, 26);
   static const Color submitArticle = Color.fromARGB(255, 209, 209, 209);
@@ -20,6 +21,8 @@ class SolidColors {
   static const Color hintText = Color.fromARGB(255, 219, 219, 219);
   static const Color selectedTagsBG = Color.fromARGB(255, 242, 242, 242);
   static const Color selectedTagsText = Color.fromARGB(255, 37, 37, 37);
+  static const Color lightIcon = Color.fromARGB(255, 255, 255, 255);
+  static const Color greyColor = Color.fromARGB(255, 156, 156, 156);
 }
 
 class GradientColors {
@@ -39,6 +42,10 @@ class GradientColors {
     Color.fromARGB(0, 0, 0, 0),
     Color.fromARGB(195, 72, 20, 88),
     Color.fromARGB(255, 28, 20, 81),
+  ];
+  static const List<Color> SingleArticleAppBar = [
+    Color.fromARGB(255, 46, 3, 71),
+    Color.fromARGB(0, 0, 0, 0),
   ];
   static const List<Color> blogPost = [
     Color.fromARGB(255, 0, 0, 0),

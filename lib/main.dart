@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:get/get.dart';
 import 'package:techblog/component/my_colors.dart';
-import 'package:techblog/view/main_screen.dart';
+import 'package:techblog/view/article_list_screen.dart';
+import 'package:techblog/view/single_article_screen.dart.dart';
+import 'package:techblog/view/main_screen/main_screen.dart';
 import 'package:techblog/view/my_categories.dart';
 import 'package:techblog/view/register_intro.dart';
 
@@ -26,16 +29,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return (MaterialApp(
-      debugShowCheckedModeBanner: false,
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale('fa'), // Farsi
-      ],
+    return (GetMaterialApp(
+      locale: const Locale('fa'),
       theme: ThemeData(
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
@@ -65,71 +60,75 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: 'dana',
         textTheme: const TextTheme(
-          displayLarge: TextStyle(
+            displayLarge: TextStyle(
+                fontFamily: 'dana',
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+                color: SolidColors.posterTitle),
+            displayMedium: TextStyle(
+                fontFamily: 'dana',
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+                color: Colors.white),
+            displaySmall: TextStyle(
+                fontFamily: 'dana',
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+                color: SolidColors.seeMore),
+            bodyLarge: TextStyle(
               fontFamily: 'dana',
-              fontSize: 16,
-              fontWeight: FontWeight.w700,
-              color: SolidColors.posterTitle),
-          displayMedium: TextStyle(
-              fontFamily: 'dana',
-              fontSize: 14,
-              fontWeight: FontWeight.w700,
-              color: Colors.white),
-          displaySmall: TextStyle(
-              fontFamily: 'dana',
-              fontSize: 14,
-              fontWeight: FontWeight.w700,
-              color: SolidColors.seeMore),
-          bodyLarge: TextStyle(
-            fontFamily: 'dana',
-            fontSize: 13,
-            fontWeight: FontWeight.w300,
-          ),
-          bodyMedium: TextStyle(
-            color: SolidColors.primaryColor,
-            fontFamily: 'dana',
-            fontSize: 18,
-            fontWeight: FontWeight.w700,
-          ),
-          bodySmall: TextStyle(
-            color: Colors.black,
-            fontFamily: 'dana',
-            fontSize: 16,
-            fontWeight: FontWeight.w700,
-          ),
-          titleLarge: TextStyle(
-              fontFamily: 'dana',
-              fontSize: 16,
-              fontWeight: FontWeight.w700,
-              color: SolidColors.welcomeText),
-          titleMedium: TextStyle(
-              fontFamily: 'dana',
-              fontSize: 14,
-              fontWeight: FontWeight.w700,
-              color: SolidColors.posterSubtitle),
-          titleSmall: TextStyle(
+              fontSize: 13,
+              fontWeight: FontWeight.w300,
+            ),
+            bodyMedium: TextStyle(
+              color: SolidColors.primaryColor,
               fontFamily: 'dana',
               fontSize: 18,
               fontWeight: FontWeight.w700,
-              color: Colors.black),
-          headlineLarge: TextStyle(
+            ),
+            bodySmall: TextStyle(
+              color: Colors.black,
               fontFamily: 'dana',
-              fontSize: 14,
-              fontWeight: FontWeight.w300,
-              color: Colors.black),
-          headlineMedium: TextStyle(
-              fontFamily: 'dana',
-              fontSize: 14,
+              fontSize: 16,
               fontWeight: FontWeight.w700,
-              color: SolidColors.hintText),
-          headlineSmall: TextStyle(
-              fontFamily: 'dana',
-              fontSize: 14,
-              fontWeight: FontWeight.w300,
-              color: SolidColors.primaryColor),
-        ),
+            ),
+            titleLarge: TextStyle(
+                fontFamily: 'dana',
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+                color: SolidColors.welcomeText),
+            titleMedium: TextStyle(
+                fontFamily: 'dana',
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+                color: SolidColors.posterSubtitle),
+            titleSmall: TextStyle(
+                fontFamily: 'dana',
+                fontSize: 18,
+                fontWeight: FontWeight.w700,
+                color: Colors.black),
+            headlineLarge: TextStyle(
+                fontFamily: 'dana',
+                fontSize: 14,
+                fontWeight: FontWeight.w300,
+                color: Colors.black),
+            headlineMedium: TextStyle(
+                fontFamily: 'dana',
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+                color: SolidColors.hintText),
+            headlineSmall: TextStyle(
+                fontFamily: 'dana',
+                fontSize: 14,
+                fontWeight: FontWeight.w300,
+                color: SolidColors.primaryColor),
+            labelMedium: TextStyle(
+                fontFamily: 'dana',
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+                color: SolidColors.primaryColor)),
       ),
-      home: MainScreen(),
+      home: const SplashScreen(),
     ));
   }
 }

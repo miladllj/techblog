@@ -25,15 +25,15 @@ class BlogModel {
       required this.views});
 }
 
-class PodcastModel {
-  int id;
-  String imageUrl;
-  String title;
-  String nariator;
+// class PodcastModel {
+//   int id;
+//   String imageUrl;
+//   String title;
+//   String nariator;
 
-  PodcastModel(
-      {required this.id,
-      required this.imageUrl,
-      required this.title,
-      required this.nariator});
-}
+//   PodcastModel(
+//       {required this.id,
+//       required this.imageUrl,
+//       required this.title,
+//       required this.nariator});
+// }

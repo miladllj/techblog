@@ -11,8 +11,10 @@ import 'package:techblog/view/article_list_screen.dart';
 import '../component/my_component.dart';
 
 class SingleArticle extends StatelessWidget {
-  SingleArticleController singleArticleController =
-      Get.put(SingleArticleController());
+  final SingleArticleController singleArticleController =
+      Get.find<SingleArticleController>();
+
+  SingleArticle({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +51,7 @@ class SingleArticle extends StatelessWidget {
                               height: 60,
                               decoration: const BoxDecoration(
                                 gradient: LinearGradient(
-                                  colors: GradientColors.SingleArticleAppBar,
+                                  colors: GradientColors.singleArticleAppBar,
                                   end: Alignment.bottomCenter,
                                   begin: Alignment.topCenter,
                                 ),

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:get/get.dart';
 import 'package:techblog/models/article_info_model.dart';
 import 'package:techblog/models/article_model.dart';
@@ -22,8 +20,7 @@ class SingleArticleController extends GetxController {
     //TODO userId is hardcode
     var userId = '';
 
-    var response = await DioServices().getMethod(ApiConstant.baseUrl +
-        'article/get.php?command=info&id=$id&user_id=$userId');
+    var response = await DioServices().getMethod('${ApiConstant.baseUrl}article/get.php?command=info&id=$id&user_id=$userId');
     if (response.statusCode == 200) {
       articleInfoModel.value = ArticleInfoModel.fromJson(response.data);
     }
@@ -38,9 +35,9 @@ class SingleArticleController extends GetxController {
     relatedList.clear();
     response.data['related'].forEach((element) {
       relatedList.add(ArticleModel.fromJson(element));
-      for (var relatedItem in relatedList) {
-        //log(relatedItem.toString());
-      }
+      // for (var relatedItem in relatedList) {
+      //   //log(relatedItem.toString());
+      // }
     });
     Get.to(() => SingleArticle());
   }

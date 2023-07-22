@@ -8,7 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../controller/list_article_controller.dart';
 import '../gen/assets.gen.dart';
-import '../models/fake_data.dart';
+// import '../models/fake_data.dart';
 import '../view/article_list_screen.dart';
 import 'my_colors.dart';
 
@@ -106,7 +106,7 @@ myLaunchUrl(String url) async {
 
 PreferredSize appBar(String title) {
   return PreferredSize(
-    preferredSize: Size.fromHeight(65),
+    preferredSize: const Size.fromHeight(65),
     child: Padding(
       padding: const EdgeInsets.all(12.0),
       child: AppBar(

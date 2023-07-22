@@ -26,14 +26,22 @@ class $AssetsIconsGen {
   /// File path: assets/icons/pen.png
   AssetGenImage get pen => const AssetGenImage('assets/icons/pen.png');
 
+  /// File path: assets/icons/podcast.png
+  AssetGenImage get podcast => const AssetGenImage('assets/icons/podcast.png');
+
   /// File path: assets/icons/user.png
   AssetGenImage get user => const AssetGenImage('assets/icons/user.png');
 
   /// File path: assets/icons/write.png
   AssetGenImage get write => const AssetGenImage('assets/icons/write.png');
 
+  /// File path: assets/icons/writearticle.png
+  AssetGenImage get writearticle =>
+      const AssetGenImage('assets/icons/writearticle.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [hashtag, home, mic, pen, user, write];
+  List<AssetGenImage> get values =>
+      [hashtag, home, mic, pen, podcast, user, write, writearticle];
 }
 
 class $AssetsImagesGen {

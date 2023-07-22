@@ -2,12 +2,12 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:techblog/controller/list_article_controller.dart';
-import 'package:techblog/view/single_article_screen.dart.dart';
+// import 'package:techblog/view/single_article_screen.dart.dart';
 import '../component/my_component.dart';
 import '../controller/single_article_controller.dart';
 
 class ArticleListScreen extends StatelessWidget {
-  String title;
+  final String title;
   ArticleListScreen({required this.title, Key? key}) : super(key: key);
   final ListArticleController articleController =
       Get.put(ListArticleController());

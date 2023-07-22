@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:get/get.dart';
 import 'package:techblog/component/api_constant.dart';
 import 'package:techblog/models/podcast_model.dart';
@@ -43,8 +41,8 @@ class HomeScreenController extends GetxController {
       });
 
       poster.value = PosterModel.fromJson(response.data['poster']);
-      log('poster.value is = ${poster.value}');
-      log('response.data is = $poster');
+      // log('poster.value is = ${poster.value}');
+      // log('response.data is = $poster');
       loading.value = false;
     }
   }

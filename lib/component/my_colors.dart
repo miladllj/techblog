@@ -43,7 +43,7 @@ class GradientColors {
     Color.fromARGB(195, 72, 20, 88),
     Color.fromARGB(255, 28, 20, 81),
   ];
-  static const List<Color> SingleArticleAppBar = [
+  static const List<Color> singleArticleAppBar = [
     Color.fromARGB(255, 46, 3, 71),
     Color.fromARGB(0, 0, 0, 0),
   ];

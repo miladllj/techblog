@@ -146,7 +146,7 @@ class _MyCategoriesState extends State<MyCategories> {
                                     width: 8.0,
                                   ),
                                   Text(
-                                    selectedTags[index].title + '   ',
+                                    '${selectedTags[index].title}   ',
                                     style: const TextStyle(
                                         color: SolidColors.selectedTagsText,
                                         fontFamily: 'dana',
@@ -178,7 +178,7 @@ class _MyCategoriesState extends State<MyCategories> {
                     height: size.height / 15.5,
                     width: size.width / 2.5,
                     child:
-                        ElevatedButton(onPressed: () {}, child: Text('ادامه')))
+                        ElevatedButton(onPressed: () {}, child: const Text('ادامه')))
               ],
             ),
           ),

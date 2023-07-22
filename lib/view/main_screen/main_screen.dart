@@ -6,13 +6,15 @@ import 'package:techblog/component/my_colors.dart';
 import 'package:techblog/view/main_screen/profile_screen.dart';
 import 'package:get/get.dart';
 import 'package:share_plus/share_plus.dart';
+// import 'package:techblog/view/register/register_intro.dart';
 
+import '../../controller/register_controller.dart';
 import 'home_screen.dart';
 
 final GlobalKey<ScaffoldState> _key = GlobalKey();
 
 class MainScreen extends StatelessWidget {
-  RxInt selectedPageIndex = 0.obs;
+  final RxInt selectedPageIndex = 0.obs;
 
   MainScreen({super.key});
 
@@ -46,7 +48,7 @@ class MainScreen extends StatelessWidget {
                   ),
                   onTap: () {
                     selectedPageIndex.value = 1;
-                  _key.currentState!.closeDrawer();
+                    _key.currentState!.closeDrawer();
                   },
                 ),
                 const Divider(
@@ -151,7 +153,7 @@ class MainScreen extends StatelessWidget {
 }
 
 class BottomNavigation extends StatelessWidget {
-  const BottomNavigation({
+  BottomNavigation({
     super.key,
     required this.size,
     required this.faseleAzRast,
@@ -208,7 +210,9 @@ class BottomNavigation extends StatelessWidget {
                     ),
                     // Write Icon
                     IconButton(
-                      onPressed: (() {}),
+                      onPressed: (() {
+                        Get.find<RegisterController>().toggleLogin();
+                      }),
                       icon: ImageIcon(
                         AssetImage(Assets.icons.write.path),
                         color: Colors.white,
